@@ -17,38 +17,38 @@ const userSchema = new Schema(
       type: String,
       default: "",
     },
-    img: {
+    image: {
       type: String,
       default: "",
     },
-    googleSignIn: {
+    googleSignedIn: {
       type: Boolean,
       required: true,
       default: false,
     },
     projects: {
-      type: [mongoose.Schema.Types.ObjectId],
+      type: [Schema.Types.ObjectId],
       ref: "Project",
       default: [],
     },
     teams: {
-      type: [mongoose.Schema.Types.ObjectId],
-      ref: "Teams",
+      type: [Schema.Types.ObjectId],
+      ref: "Team",
       default: [],
     },
     notifications: {
-      type: [mongoose.Schema.Types.ObjectId],
-      ref: "Notifications",
+      type: [Schema.Types.ObjectId],
+      ref: "Notification",
       default: [],
     },
     works: {
-      type: [mongoose.Schema.Types.ObjectId],
-      ref: "Works",
+      type: [Schema.Types.ObjectId],
+      ref: "Work",
       default: [],
     },
     tasks: {
-      type: [mongoose.Schema.Types.ObjectId],
-      ref: "Tasks",
+      type: [Schema.Types.ObjectId],
+      ref: "Task",
       default: [],
     },
   },

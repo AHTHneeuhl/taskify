@@ -65,7 +65,7 @@ export const signIn = async (req, res, next) => {
       return next(createError(201, "User not found"));
     }
 
-    if (user.googleSignIn) {
+    if (user.googleSignedIn) {
       return next(
         createError(
           201,
@@ -107,7 +107,7 @@ export const signInWithGoogle = async (req, res, next) => {
       } catch (err) {
         next(err);
       }
-    } else if (user.googleSignIn) {
+    } else if (user.googleSignedIn) {
       const token = jwt.sign({ id: user._id }, process.env.JWT, {
         expiresIn: "7d",
       });
