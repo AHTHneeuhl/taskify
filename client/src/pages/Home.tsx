@@ -1,10 +1,10 @@
 import { Container } from "@nextui-org/react";
-import { Features, Hero, Testimonials } from "components/home";
-import Plans from "components/home/Plans";
+import { Features, Hero, Navbar, Plans, Testimonials } from "components/home";
 
 const Home: React.FC = () => {
   return (
     <Container>
+      <Navbar />
       <Hero />
       <Features />
       <Plans />
