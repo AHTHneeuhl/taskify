@@ -1,5 +1,7 @@
+import { Container } from "@nextui-org/react";
+
 const Project: React.FC = () => {
-  return null;
+  return <Container>Project</Container>;
 };
 
 export default Project;
