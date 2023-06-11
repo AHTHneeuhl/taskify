@@ -1,8 +1,18 @@
 import { applicationRoutes as routes } from "config";
-import { DashboardPage, ProjectPage, TaskPage, TeamPage } from "pages";
+import {
+  DashboardPage,
+  HomePage,
+  ProjectPage,
+  TaskPage,
+  TeamPage,
+} from "pages";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
 const router = createBrowserRouter([
+  {
+    path: routes.pages.home,
+    element: <HomePage />,
+  },
   {
     path: routes.pages.dashboard,
     element: <DashboardPage />,
