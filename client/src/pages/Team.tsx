@@ -1,5 +1,7 @@
+import { Container } from "@nextui-org/react";
+
 const Team: React.FC = () => {
-  return null;
+  return <Container>Team</Container>;
 };
 
 export default Team;
