@@ -1,4 +1,5 @@
 import { applicationRoutes as routes } from "config";
+import { AppLayout } from "layouts";
 import {
   DashboardPage,
   HomePage,
@@ -14,20 +15,25 @@ const router = createBrowserRouter([
     element: <HomePage />,
   },
   {
-    path: routes.pages.dashboard,
-    element: <DashboardPage />,
-  },
-  {
-    path: routes.pages.projects,
-    element: <ProjectPage />,
-  },
-  {
-    path: routes.pages.tasks,
-    element: <TaskPage />,
-  },
-  {
-    path: routes.pages.teams,
-    element: <TeamPage />,
+    element: <AppLayout />,
+    children: [
+      {
+        path: routes.pages.dashboard,
+        element: <DashboardPage />,
+      },
+      {
+        path: routes.pages.projects,
+        element: <ProjectPage />,
+      },
+      {
+        path: routes.pages.tasks,
+        element: <TaskPage />,
+      },
+      {
+        path: routes.pages.teams,
+        element: <TeamPage />,
+      },
+    ],
   },
 ]);
 
