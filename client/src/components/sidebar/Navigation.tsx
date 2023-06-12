@@ -4,7 +4,14 @@ import { NavLink } from "react-router-dom";
 
 const Navigation: React.FC = () => {
   return (
-    <Container>
+    <Container
+      css={{
+        display: "flex",
+        flexDirection: "column",
+        gap: "$xs",
+        padding: "$12 0",
+      }}
+    >
       {navigation.map(({ label, path }) => (
         <NavLink key={label} to={path}>
           <Text>{label}</Text>
