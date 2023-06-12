@@ -1,7 +1,12 @@
 import { Router } from "express";
 
-import { verifyToken } from "../middlewares/verifyToken";
-import { addTeam, deleteTeam, getTeam, updateTeam } from "../controllers/teams";
+import { verifyToken } from "../middlewares/verifyToken.js";
+import {
+  addTeam,
+  deleteTeam,
+  getTeam,
+  updateTeam,
+} from "../controllers/teams.js";
 
 const router = Router();
 

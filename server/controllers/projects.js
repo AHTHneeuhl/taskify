@@ -1,6 +1,6 @@
 import { Types } from "mongoose";
-import Projects from "../models/Project.js";
-import Users from "../models/User.js";
+import Projects from "../models/Projects.js";
+import Users from "../models/Users.js";
 import Works from "../models/Work.js";
 
 export const getProject = async (req, res, next) => {

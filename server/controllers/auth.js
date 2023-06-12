@@ -4,7 +4,7 @@ import jwt from "jsonwebtoken";
 import otpGenerator from "otp-generator";
 import nodemailer from "nodemailer";
 
-import User from "../models/User.js";
+import User from "../models/Users.js";
 
 dotenv.config();
 
@@ -44,7 +44,7 @@ export const signUp = async (req, res, next) => {
     newUser
       .save()
       .then((user) => {
-        const token = jwt.sign({ id: user._id }, process.env.JWT, {
+        const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET, {
           expiresIn: "7d",
         });
         res.status(200).json({ token, user });
@@ -80,7 +80,7 @@ export const signIn = async (req, res, next) => {
       return next(createError(201, "Wrong password"));
     }
 
-    const token = jwt.sign({ id: user._id }, process.env.JWT, {
+    const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET, {
       expiresIn: "7d",
     });
 

@@ -1,6 +1,6 @@
 import { Router } from "express";
 
-import { verifyToken } from "../middlewares/verifyToken";
+import { verifyToken } from "../middlewares/verifyToken.js";
 import {
   addProject,
   deleteProject,
@@ -9,7 +9,7 @@ import {
   getWorks,
   updateMembers,
   updateProject,
-} from "../controllers/projects";
+} from "../controllers/projects.js";
 
 const router = Router();
 

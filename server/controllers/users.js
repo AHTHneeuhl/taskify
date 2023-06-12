@@ -1,8 +1,8 @@
-import User from "../models/User.js";
-import Project from "../models/Project.js";
+import User from "../models/Users.js";
+import Project from "../models/Projects.js";
 import Teams from "../models/Team.js";
 import Notifications from "../models/Notification.js";
-import createError from "../error.js";
+import { createError } from "../error.js";
 
 export const getUser = async (req, res, next) => {
   try {
