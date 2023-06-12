@@ -1,5 +1,5 @@
 import Teams from "../models/Team.js";
-import User from "../models/User.js";
+import User from "../models/Users.js";
 import { createError } from "../error.js";
 
 export const getTeam = async (req, res, next) => {
