@@ -5,6 +5,8 @@ import { Formik } from "formik";
 const formInitialValues = {
   title: "",
   description: "",
+  category: "",
+  members: [],
 };
 
 const CreateTeam: React.FC = () => {
@@ -19,8 +21,19 @@ const CreateTeam: React.FC = () => {
           <Text>Create Team</Text>
         </Card.Header>
         <Card.Body>
-          <Input label="Title" placeholder="Title" />
-          <Input label="Description" placeholder="Description" />
+          <Input id="title" name="title" label="Title" placeholder="Title" />
+          <Input
+            id="category"
+            name="category"
+            label="Category"
+            placeholder="Category"
+          />
+          <Input
+            id="description"
+            name="description"
+            label="Description"
+            placeholder="Description"
+          />
         </Card.Body>
         <Card.Footer>
           <Button>Create Team</Button>
