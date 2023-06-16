@@ -2,7 +2,7 @@ import { Router } from "express";
 
 import { verifyToken } from "../middlewares/verifyToken.js";
 import {
-  addTeam,
+  createTeam,
   deleteTeam,
   getTeam,
   updateTeam,
@@ -10,7 +10,7 @@ import {
 
 const router = Router();
 
-router.post("/", verifyToken, addTeam);
+router.post("/", verifyToken, createTeam);
 router.get("/:id", verifyToken, getTeam);
 router.patch("/:id", verifyToken, updateTeam);
 router.delete("/:id", verifyToken, deleteTeam);

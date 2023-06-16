@@ -33,7 +33,7 @@ export const getTeam = async (req, res, next) => {
   }
 };
 
-export const addTeam = async (req, res, next) => {
+export const createTeam = async (req, res, next) => {
   const user = await User.findById(req.user.id);
   if (!user) return next(createError(404, "User not found"));
 
