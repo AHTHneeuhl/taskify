@@ -6,6 +6,7 @@ export interface TSignInPayload {
 }
 
 const signIn = async (payload: TSignInPayload) => {
+  console.log("signIn", payload);
   const { data } = await taskifyPublicAPI.post("/auth/signIn", payload);
 
   return data;

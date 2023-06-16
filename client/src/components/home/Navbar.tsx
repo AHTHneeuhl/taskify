@@ -1,6 +1,10 @@
-import { Button, Navbar, Text, Link } from "@nextui-org/react";
+import { Button, Navbar, Text } from "@nextui-org/react";
+import { useSignInModal, useSignUpModal } from "hooks/auth";
 
 const App: React.FC = () => {
+  const { onOpen: onOpenSignUpModal } = useSignUpModal();
+  const { onOpen: onOpenSignInModal } = useSignInModal();
+
   return (
     <Navbar isBordered variant="floating" maxWidth="fluid">
       <Navbar.Brand>
@@ -17,11 +21,11 @@ const App: React.FC = () => {
         <Navbar.Link href="#">About</Navbar.Link>
       </Navbar.Content>
       <Navbar.Content>
-        <Navbar.Link color="inherit" href="#">
+        <Navbar.Link color="inherit" onPress={onOpenSignInModal}>
           Login
         </Navbar.Link>
         <Navbar.Item>
-          <Button auto flat as={Link} href="#">
+          <Button auto flat onPress={onOpenSignUpModal}>
             Sign Up
           </Button>
         </Navbar.Item>
