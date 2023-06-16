@@ -5,3 +5,4 @@ export { default as navigation } from "./navigation";
 export * from "./taskValidation";
 export * from "./teamValidation";
 export * from "./projectValidation";
+export * from "./authValidation";
