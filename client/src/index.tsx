@@ -1,4 +1,5 @@
 import { NextUIProvider } from "@nextui-org/react";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { Provider } from "react-redux";
@@ -8,6 +9,8 @@ import theme from "theme/theme";
 import App from "./App";
 import "./index.css";
 
+const queryClient = new QueryClient();
+
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
@@ -15,14 +18,16 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <Provider store={reduxStore}>
-      <NextUIProvider theme={theme}>
-        <App />
-        <ToastContainer
-          position="top-right"
-          hideProgressBar
-          closeOnClick={false}
-        />
-      </NextUIProvider>
+      <QueryClientProvider client={queryClient}>
+        <NextUIProvider theme={theme}>
+          <App />
+          <ToastContainer
+            position="top-right"
+            hideProgressBar
+            closeOnClick={false}
+          />
+        </NextUIProvider>
+      </QueryClientProvider>
     </Provider>
   </React.StrictMode>
 );
