@@ -1,9 +1,1 @@
-# Taskify - Full Stack Application
-
-Tech Stack
-
-- ReactJs
-- NextUI
-- NodeJs
-- ExpressJs
-- MongoDB
+## <font color="#FFD0D0">Work In Progress</font>
